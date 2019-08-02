@@ -1,0 +1,10 @@
+.App {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); 
+}
+
+.recipes{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
