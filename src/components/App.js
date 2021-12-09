@@ -1,19 +1,22 @@
-import React,{ useEffect , useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/App.css';
 import Recipe from "./Recipe";
 import SearchBar from "./SearchBar";
+import Alert from './Alert';
 
 const App = () => {
 
   const API_ID = "ea1977da";
   const API_KEY = "1583f8777adbe7b584496cfc50777fd6";
 
-  const [recipes,setRecipes] = useState([]);
-  const [searchTerm,setSearchTerm] = useState("");
+  const [recipes, setRecipes] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [alert, setAlert] = useState(null);
 
   useEffect(() => {
-      getRecipes();
-  }, [searchTerm]) ;
+    getRecipes();
+    // eslint-disable-next-line
+  }, [searchTerm]);
 
   const getRecipes = async () => {
     const respones = await fetch(`https://api.edamam.com/search?q=${searchTerm}&app_id=${API_ID}&app_key=${API_KEY}`);
@@ -22,20 +25,31 @@ const App = () => {
   };
 
   const setSearch = search => {
-      setSearchTerm(search);
+    setSearchTerm(search);
   }
 
-  return(
+  const showAlert = (message, type) => {
+    setAlert({
+      mssg: message,
+      type: type
+    });
+    setTimeout(() => {
+      setAlert(null)
+    }, 1500);
+  }
+
+  return (
     <div className="App">
-      <SearchBar setSearch={setSearch}/>
+      <Alert alert={alert} />
+      <SearchBar setSearch={setSearch} showAlert={showAlert} />
 
       <div className="recipes">
         {recipes.map((recipe) => (
-          <Recipe 
-            key={recipe.recipe.label} 
-            title={recipe.recipe.label} 
-            calories={recipe.recipe.calories} 
-            image={recipe.recipe.image} 
+          <Recipe
+            key={recipe.recipe.url}
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
           />
         ))}
