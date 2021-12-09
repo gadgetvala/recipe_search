@@ -1,20 +1,33 @@
-.search-form{
+.search-form {
   min-height: 10vh;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.searchBar {
+  margin-top: 2rem;
 }
 
 .search-bar {
   width: 50%;
   border: none;
   padding: 10px;
+  outline: none;
 }
 
 .search-button {
   background: lightcoral;
-  border:none;
-  padding:10px 20px;
-  color:white ;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
 }
 
+.clear-btn {
+  position: absolute;
+  right: 12.5rem !important;
+  top: 4.6rem !important;
+  background: gray;
+  margin-left: 0.5rem;
+}
