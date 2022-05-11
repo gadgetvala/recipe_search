@@ -32,7 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "prettier --check .",
-    "format": "prettier --write  --ignore-unknown ."
+    "format": "prettier --write  --ignore-unknown .",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
