@@ -1,11 +1,19 @@
+import { Link } from 'react-router-dom';
 import { RecipeContainerS } from './style';
+interface IParameter {
+  img: string;
+  name: string;
+  id: string;
+}
 
-const RecipeContainer = ({ img, name }: { img: string; name: string }) => {
+const RecipeContainer = ({ img, name, id }: IParameter) => {
   return (
-    <RecipeContainerS>
-      <img src={img} alt={name} />
-      <h1>{name}</h1>
-    </RecipeContainerS>
+    <Link to={`/details/${id}`}>
+      <RecipeContainerS>
+        <img src={img} alt={name} />
+        <h1>{name}</h1>
+      </RecipeContainerS>
+    </Link>
   );
 };
 
