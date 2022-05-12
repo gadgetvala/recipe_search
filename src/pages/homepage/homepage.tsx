@@ -25,8 +25,6 @@ const Homepage = () => {
 
   const debouncedOnChange = debounce(updateQuery, 300);
 
-  console.log(isLoading);
-
   return (
     <MainContainer>
       <SearchBar
@@ -52,7 +50,16 @@ const Homepage = () => {
         {!isLoading &&
           allRecipe.length > 0 &&
           allRecipe.map((r, index) => {
-            return <RecipeContainer key={index} img={r.image} name={r.label} />;
+            const uniqueID = r.uri.split('#')[1];
+
+            return (
+              <RecipeContainer
+                key={index}
+                img={r.image}
+                name={r.label}
+                id={uniqueID}
+              />
+            );
           })}
       </RecipeContainerWrapper>
     </MainContainer>
