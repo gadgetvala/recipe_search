@@ -15,6 +15,8 @@
 
 ## 🔥 &nbsp;Live Demo
 
+![App Demo](README_FILES/demo.gif)
+
 ## 🚀 &nbsp;Installation
 
 To clone and run this application, you'll need **[Git](https://git-scm.com)**, **[Docker](https://www.docker.com/products/docker-desktop/)** installed on your computer.
