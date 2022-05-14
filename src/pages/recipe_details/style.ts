@@ -13,6 +13,18 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+
+  @media (max-width: 600px) {
+    width: 90%;
+    padding-top: 3rem;
+    flex-direction: column;
+  }
+
+  @media (max-width: 992px) {
+    width: 90%;
+    padding-top: 2rem;
+    flex-direction: column;
+  }
 `;
 
 export const MainImageContainer = styled.div`
@@ -26,6 +38,10 @@ export const MainImageContainer = styled.div`
   & img {
     margin-top: 2rem;
     border-radius: 6px;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 1rem;
   }
 `;
 

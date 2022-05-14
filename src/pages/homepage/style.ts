@@ -25,4 +25,8 @@ export const SearchBar = styled.input`
   border-radius: 8px;
   border: 1px solid #cacaca;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+  @media (max-width: 600px) {
+    width: 60vw;
+  }
 `;
