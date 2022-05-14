@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> “Recipe Search 🍴
+> is not an ordinary recipe search application.
 
-## Available Scripts
+## :bulb: Key Features
 
-In the project directory, you can run:
+- [x] Typescript
+- [x] Redux
+- [x] React-Routing
+- [x] React-Routing
+- [x] Docker
+- [x] Husky
+- [x] Debounce & Throttling
 
-### `npm start`
+## 🔥 &nbsp;Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 &nbsp;Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To clone and run this application, you'll need **[Git](https://git-scm.com)**, **[Docker](https://www.docker.com/products/docker-desktop/)** installed on your computer.
 
-### `npm test`
+```bash
+# Clone this repository
+$ git clone https://github.com/gadgetvala/recipe_search.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Go into the repository
+$ cd recipe_search/
 
-### `npm run build`
+# Start Application
+$ docker-compose up
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📦 &nbsp;Packages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Some very good packages are used in the project, not a big list.
+Below are the information about these packages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| package                                                              | explain                                                                                                     |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [axios](https://www.npmjs.com/package/axios)                         | Promise based HTTP client for the browser and node.js                                                       |
+| [lodash.debounce](https://www.npmjs.com/package/lodash.debounce)     | Debounce Function                                                                                           |
+| [styled-components](https://www.npmjs.com/package/styled-components) | Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress |
 
-### `npm run eject`
+### 🧵 &nbsp;Directory Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project directory structure in **src** is as follows:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+├── api
+├── assets
+├── components
+├── constants
+├── interfaces
+├── pages
+├── redux_config
+├── styles
+├── types
+├── App.tsx
+├── index.tsx
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Let me explain the other directories.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| directory    | explain                               |
+| ------------ | ------------------------------------- |
+| api          | Contain API configuration & Functions |
+| assets       | Contain static assets for app         |
+| components   | Contain all global shared Components  |
+| constants    | Global & App Constants                |
+| interfaces   | Interface for APIS & UI Compoents     |
+| pages        | Pages Components for Routing          |
+| redux_config | All Configs and Store                 |
+| styles       | Global Styles                         |
+| types        | Types for Typescript compiler6        |
+| App.tsx      | Main App Routing Point                |
+| index.tsx    | Main App Entry Point                  |
 
-## Learn More
+## :clap: Done
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to **file a new issue** with a respective title and description on the the [recipe_search](https://github.com/gadgetvala/recipe_search/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📘&nbsp; License
+
+The recipe_search app is released under the under terms of the [MIT License](LICENSE).
+
+## :heart: Contributor
+
+Made by [Suraj Verma](https://github.com/gadgetvala)
